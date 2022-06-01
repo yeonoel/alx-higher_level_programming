@@ -1,0 +1,2 @@
+#!/bin/bash
+pythons -c $PYCODE
