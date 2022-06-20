@@ -9,7 +9,7 @@ def magic_calculation(a, b):
                 raise Exception('Too far')
             else:
                 result += a ** b / i
-        except (Exception, IndexError, TypeError, ZeroDivisionError, ValueError):
+        except (Exception, IndexError, TypeError, ZeroDivisionError):
             result = b + a
             break
     return (result)
