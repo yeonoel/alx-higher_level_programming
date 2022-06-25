@@ -1,7 +1,7 @@
-#0x07. Python - Test-driven development
+# 0x07. Python - Test-driven development
 ________________________________________________
 
-__Background Context
+__ Background Context
 Important notice on intranet checks for Python projects
 Starting from today:
 
@@ -11,7 +11,7 @@ We strongly encourage you to work together on test cases, so that you don’t mi
 Don’t trust the user, always think about all possible edge cases
 
 
-##General
+## General
 Why Python programming is awesome
 What’s an interactive test
 Why tests are important
