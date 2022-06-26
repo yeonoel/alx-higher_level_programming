@@ -7,26 +7,40 @@ This module defines an integer addition function ``add_integer(a, b=98)``.
 Usage
 =====
 
+``add_integer(...)``` returns the addition of the two arguments. For numbers,
+that value is equivalent to using the ``+`` operator.
+
 ::
 
     >>> add_integer = __import__('0-add_integer').add_integer
-    >>> add_integer(8, 3)
-    11
-
-Both negative and positive integers can be added.
-::
-
-    >>> add_integer(-10, 10)
-    0
-
-Floats are typecasted to int before addition is performed.
+    >>> add_integer(2, 3)
+    5
 
 ::
 
-    >>> add_integer(1.0, 7.55)
-    8
+    >>> add_integer(2, -3)
+    -1
 
-Floats and integer addition.
+The function also works with floating-point values.
+
+::
+
+    >>> add_integer(2.0, 3.0)
+    5
+
+Note that floats are casted to integers before addition.
+
+::
+
+    >>> add_integer(2.9, 0.2)
+    2
+
+::
+
+    >>> add_integer(-2.9, -0.2)
+    -2
+
+Floating and non-floating point values can be combined.
 
 ::
 
@@ -37,13 +51,14 @@ The second argument is optional - by default, it is 98.
 
 ::
 
-    >>> add_integer(102)
-    200
+    >>> add_integer(2)
+    100
 
 Non-Numbers
 ===========
 
-add_integer expects only integers and floats arguments.
+``add_integer()`` expects that both arguments are either integers or floats.
+If either argument is a non-integer and non-float, a TypeError is raised:
 
 ::
 
@@ -93,7 +108,7 @@ The function will fail if infinity is provided.
     Traceback (most recent call last):
     OverflowError: cannot convert float infinity to integer
 
- With NaN numbers.
+And again with NaN numbers.
 
 ::
 
