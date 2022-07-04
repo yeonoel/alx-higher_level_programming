@@ -7,4 +7,4 @@ def lookup(obj):
     Return:
         Attrubutes and methode of obj
     """
-    return (dir(obj))
+    return (list(dir(obj)))
