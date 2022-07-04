@@ -28,7 +28,8 @@ class BaseGeometry:
 class Rectangle(BaseGeometry):
     """Representation of Rectangle."""
     def __init__(self, width, height):
-        """Initialise Recatangle.
+        """Initialise a new Rectangle.
+
         Args:
             width(int): the widht of the Rectangle.
             height(int): The height of the Rectangle.
