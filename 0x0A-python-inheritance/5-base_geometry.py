@@ -3,4 +3,5 @@
 
 
 class BaseGeometry:
+    """ the Geometry Base"""
     pass
