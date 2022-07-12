@@ -73,3 +73,11 @@ class Rectangle(Base):
         for i in range(self.height):
             [print("#", end='') for j in range(self.width)]
             print()
+
+    def __str__(self):
+        """Return the Rectangle"""
+        string = "[" + str(self.__class__.__name__) + "] "
+        string += "(" + str((self.id)) + ") "
+        string += str(self.x) + "/" + str(self.y) + " - "
+        string += str(self.width) + "/" + str(self.height)
+        return (string)
