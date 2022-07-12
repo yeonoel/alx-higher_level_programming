@@ -1,12 +1,10 @@
 #!/usr/bin/python3
 """Define the First Rectangle tha inherits from Base."""
-from  models.base import  Base 
-
+from models.base import Base
 
 
 class Rectangle(Base):
     """Represent First Rectangle."""
-
     def __init__(self, width, height, x=0, y=0, id=None):
         self.width = width
         self.height = height
@@ -18,6 +16,7 @@ class Rectangle(Base):
     def width(self):
         """Get/set width od the rectangle."""
         return (self.__width)
+
     @width.setter
     def width(self, value):
         self.__width = value
@@ -26,6 +25,7 @@ class Rectangle(Base):
     def height(self):
         """Get/set height of the rectangle."""
         return (self.__height)
+
     @height.setter
     def height(self, value):
         self.__height = value
@@ -34,6 +34,7 @@ class Rectangle(Base):
     def x(self):
         """Get/set x of the rectangle."""
         return (self.__x)
+
     @x.setter
     def x(self, value):
         self.__x = value
@@ -42,6 +43,7 @@ class Rectangle(Base):
     def y(self):
         """Get/set y of the rectangle."""
         return (self.__y)
+
     @y.setter
     def y(self, value):
         self.__y = value
