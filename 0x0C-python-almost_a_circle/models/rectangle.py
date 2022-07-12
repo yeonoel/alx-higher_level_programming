@@ -70,6 +70,11 @@ class Rectangle(Base):
 
     def display(self):
         """ print in stdout the Rectangle."""
+        if self.width == 0 or self.height == 0:
+            print()
+            return
+
+        [print() for y in range(self.y)]
         for i in range(self.height):
             [print(" ", end="") for p in range(self.x)]
             [print("#", end='') for j in range(self.width)]
