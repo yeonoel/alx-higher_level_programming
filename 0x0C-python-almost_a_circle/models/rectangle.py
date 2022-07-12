@@ -1,18 +1,18 @@
 #!/usr/bin/python3
 """Define the First Rectangle tha inherits from Base."""
-base = __import__('base').Base 
+from  models.base import  Base 
 
 
 
-class Rectangle(base):
+class Rectangle(Base):
     """Represent First Rectangle."""
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        super().__init__(id=None)
         self.width = width
         self.height = height
         self.x = x
         self.y = y
+        super().__init__(id)
 
     @property
     def width(self):
