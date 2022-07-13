@@ -88,7 +88,7 @@ class Rectangle(Base):
         string += str(self.width) + "/" + str(self.height)
         return (string)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """assign argument to each attribute"""
         if (args) and len(args) != 0:
             for i, v in enumerate(args):
@@ -102,3 +102,18 @@ class Rectangle(Base):
                     self.x = v
                 elif i == 4:
                     self.y = v
+        else:
+            for k, val in kwargs.items():
+                if k == "id":
+                    if val == None:
+                        self.__init__(self.width, self.height, self.x, self.y)
+                    else:
+                        self.id = val
+                elif k == "width":
+                    self.width = val
+                elif k == "height":
+                    self.height = val
+                elif k == "x":
+                    self.x = val
+                elif k == "y":
+                    self.y = val
