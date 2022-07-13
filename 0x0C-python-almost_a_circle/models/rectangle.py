@@ -105,7 +105,7 @@ class Rectangle(Base):
         else:
             for k, val in kwargs.items():
                 if k == "id":
-                    if val == None:
+                    if val is None:
                         self.__init__(self.width, self.height, self.x, self.y)
                     else:
                         self.id = val
