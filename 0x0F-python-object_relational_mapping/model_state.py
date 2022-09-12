@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-""" Define State model .
+"""
+    Define State model .
     nherits from Base
     links to the MySQL table states
 """
@@ -9,6 +10,7 @@ from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()
 
+
 class State(Base):
     """ Represents a the Table of state in MySQL database
 
@@ -16,7 +18,6 @@ class State(Base):
     id (sqlalchemy.Integer): the id od a state
     name (sqlalchemy.String): the name of the a state.
     """
-
     __tablename__ = 'states'
     id = Column(Integer, primary_key=True)
     name = Column(String(128), nullable=False)
