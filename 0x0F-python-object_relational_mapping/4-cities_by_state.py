@@ -9,7 +9,7 @@ if __name__ == "__main__":
     cur = db.cursor()
     cur.execute("SELECT cities.id, cities.name, states.name\
                 FROM cities INNER JOIN states\
-                ON cities.id = states.id ORDER BY id ASC")
+                ON state_id = states.id ORDER BY id ASC")
     cities = cur.fetchall()
     for citie in cities:
         print(citie)
