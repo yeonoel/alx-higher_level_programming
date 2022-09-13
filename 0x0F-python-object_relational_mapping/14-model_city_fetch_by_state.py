@@ -7,8 +7,8 @@ Usage: ./14-model_city_fetch_by_state.py <mysql username> /
 import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from model_state import State
-from model_city import City
+from model_state import Base, State
+from model_city import Base, City
 
 if __name__ == "__main__":
     engine = create_engine("mysql+mysqldb://{}:{}@localhost/{}"
