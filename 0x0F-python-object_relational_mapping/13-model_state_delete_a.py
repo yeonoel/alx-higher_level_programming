@@ -2,9 +2,7 @@
 """
 Deletes all State objects with a name containing
 the letter a from the database hbtn_0e_6_usa.
-Usage: ./13-model_state_delete_a.py <mysql username> /
-                                    <mysql password> /
-                                    <database name>
+
 """
 import sys
 from sqlalchemy import create_engine
@@ -22,3 +20,4 @@ if __name__ == "__main__":
         if "a" in state.name:
             session.delete(state)
     session.commit()
+    session.close()
