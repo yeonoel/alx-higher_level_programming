@@ -1,8 +1,7 @@
 #!/usr/bin/python3
-
-""" Define city model.
-    inherits from Base (imported from model_state).
-    links to the MySQL table cities.
+"""
+Defines a City model.
+Inherits from SQLAlchemy Base and links to the MySQL table cities.
 """
 
 from sqlalchemy import Column, ForeignKey, Integer, String
@@ -12,15 +11,13 @@ Base = declarative_base()
 
 
 class City(Base):
-    """Represents the table of city in MySQL database.
-
-    __tablename__(str) : the table name to store states in databases.
-    id (sqlalchemy.Integer) : id city.
-    name (sqlalchemy.String) : city name.
-    state_id (sqlalchemy.Integer) : state id like foreign key.
+    """Represents a city for a MySQL database.
+    Attributes:
+        id (str): The city's id.
+        name (sqlalchemy.Integer): The city's name.
+        state_id (sqlalchemy.String): The city's state id.
     """
-
-    __tablename__ = 'cities'
+    __tablename__ = "cities"
     id = Column(Integer, primary_key=True)
     name = Column(String(128), nullable=False)
     state_id = Column(Integer, ForeignKey("states.id"), nullable=False)
