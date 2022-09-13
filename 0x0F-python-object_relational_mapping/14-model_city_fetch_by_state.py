@@ -17,4 +17,4 @@ if __name__ == "__main__":
     for state, city in session.query(State, City).\
             filter(State.id == City.state_id).\
             order_by(City.id):
-        print(f"{state.name}: ({citie.id}) {citie.name}")
+        print("{}: ({}) {}".format(state.name, city.id, city.name))
