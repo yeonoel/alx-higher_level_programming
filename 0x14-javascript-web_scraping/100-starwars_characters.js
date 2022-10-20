@@ -6,7 +6,7 @@ request('http://swapi.co/api/films/' + process.argv[2], function (err, response,
   if (err) {
     console.error(err);
   }
-  JSON.parse(body).characteres.forEach(function (url, callbackfunc) {
+  JSON.parse(body).characters.forEach(function (url, callbackfunc) {
     request(url, (error, response, body) => {
       if (error) {
         console.error(error);
