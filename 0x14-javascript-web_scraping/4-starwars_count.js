@@ -8,7 +8,7 @@ request(process.argv[2], (error, response, body) => {
   } else {
     const number = JSON.parse(body).results.filter((item) => {
       return item.characters.filter((url) => {
-        return url.include('18');
+        return url.includes('18');
       }).length;
     }).length;
     console.log(number);
